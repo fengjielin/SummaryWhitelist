@@ -1,0 +1,85 @@
+/* 年份选择下拉框样式 */
+.select-container {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  padding-right: 32px;
+  gap: 16px;
+}
+
+.select-box {
+  position: relative;
+}
+
+.year-select {
+  background-color: rgba(15, 30, 61, 0.8);
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  outline: none;
+  appearance: none;
+  padding-right: 32px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.year-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  border-color: rgba(59, 130, 246, 0.8);
+}
+
+.year-select:hover {
+  border-color: rgba(59, 130, 246, 0.7);
+  background-color: rgba(15, 30, 61, 0.9);
+}
+
+.year-select option {
+  background-color: rgba(15, 30, 61, 0.95);
+  color: var(--text-primary);
+  padding: 8px;
+}
+
+.select-icon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.year-select:focus + .select-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .year-select {
+    font-size: 13px;
+    padding: 5px 10px;
+    padding-right: 28px;
+  }
+
+  .select-icon {
+    font-size: 11px;
+    right: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .year-select {
+    font-size: 12px;
+    padding: 4px 8px;
+    padding-right: 24px;
+  }
+
+  .select-icon {
+    font-size: 10px;
+    right: 5px;
+  }
+}
