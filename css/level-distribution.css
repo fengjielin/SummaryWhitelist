@@ -1,0 +1,123 @@
+/* 赛项等级分布卡片样式 */
+.level-distribution-card {
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.level-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.level-title {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.level-icon {
+  color: rgba(59, 130, 246, 0.7);
+  font-size: 18px;
+}
+
+.level-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+
+.level-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.level-right {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-chart {
+  height: 160px;
+  width: 100%;
+}
+
+.level-stats {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+
+.level-stat-item {
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 8px;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.level-stat-item:hover {
+  background: rgba(15, 23, 42, 0.7);
+  transform: translateY(-1px);
+}
+
+.level-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.level-number {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .level-content {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .level-left {
+    order: 2;
+  }
+  
+  .level-right {
+    order: 1;
+  }
+  
+  .level-chart {
+    height: 140px;
+  }
+  
+  .level-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .level-stats {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,89 @@
+/* 获奖等级分布卡片样式 */
+.award-level-card {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  height: 100%; 
+  position: relative;
+}
+
+.award-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.award-title {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.award-filters {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  top: -24px;
+  right: 0;
+}
+
+.award-filter-btn {
+  background: var(--bg-dark);
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.award-filter-btn:hover {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--primary-color);
+}
+
+.award-filter-active {
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--primary-color);
+}
+
+.award-chart {
+  height: 100%; 
+  width: 100%;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .award-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .award-filters {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .award-chart {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .award-filters {
+    flex-wrap: wrap;
+  }
+  
+  .award-filter-btn {
+    font-size: 11px;
+    padding: 3px 10px;
+  }
+  
+  .award-chart {
+    height: 200px;
+  }
+} 

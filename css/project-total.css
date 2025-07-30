@@ -1,0 +1,92 @@
+/* 参赛项目总数卡片样式 */
+.project-total-card {
+  border-radius: 12px;
+  padding: 16px 24px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.total-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.total-title {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.total-icon {
+  color: rgba(59, 130, 246, 0.7);
+  font-size: 18px;
+}
+
+.total-content {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.total-info {
+  flex: 1;
+}
+
+.total-number {
+  font-size: 36px; /* text-4xl = 2.25rem = 36px */
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.total-trend {
+  color: var(--secondary-color);
+  font-size: 12px;
+  margin: 0;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.total-trend i {
+  margin-right: 4px;
+  color: #10b981; /* 绿色表示上升 */
+}
+
+.total-chart {
+  width: 64px; /* w-16 = 4rem = 64px */
+  height: 64px; /* h-16 = 4rem = 64px */
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .project-total-card {
+    padding: 16px;
+  }
+  
+  .total-number {
+    font-size: 28px;
+  }
+  
+  .total-chart {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .total-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .total-chart {
+    width: 56px;
+    height: 56px;
+  }
+} 

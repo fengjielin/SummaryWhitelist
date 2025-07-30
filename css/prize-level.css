@@ -1,0 +1,94 @@
+/* 获奖等级统计卡片样式 */
+.prize-level-card {
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.prize-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.prize-title {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.prize-icon {
+  color: rgba(59, 130, 246, 0.7);
+  font-size: 18px;
+}
+
+.prize-chart {
+  height: 146px;
+  margin-bottom: 6px;
+}
+
+.prize-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 12px;
+}
+
+.prize-stat-item {
+  background: rgba(10, 25, 47, 0.5);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.prize-stat-item:hover {
+  background: rgba(10, 25, 47, 0.7);
+  transform: translateY(-1px);
+}
+
+.prize-stat-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.prize-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.prize-dot-accent {
+  background-color: var(--accent-color);
+}
+
+.prize-dot-primary {
+  background-color: var(--primary-color);
+}
+
+.prize-dot-secondary {
+  background-color: var(--secondary-color);
+}
+
+.prize-dot-other {
+  background-color: var(--text-secondary);
+}
+
+.prize-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.prize-number {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--text-primary);
+  margin: 0;
+  margin-top: 4px;
+}
